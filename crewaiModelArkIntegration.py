@@ -1,3 +1,14 @@
+# sample python class to show integration of BytePlus ModelArk API with crewai sdk.
+# #Crewai internally uses litellm interface, which has a list of pre-defined models / model providers : https://docs.litellm.ai/docs/providers/openai_compatible
+# As BytePlus ModelArk is not added in the litellm providers list, using ModelArk API will throw "model is not in the provider list" error
+# Solution : 
+#- Litellm has custom server / open-ai compatible endpoints option : https://docs.litellm.ai/docs/providers/openai_compatible
+#- BytePlus Modelark API is openai-compatible. Following points to take note of while creating custom class for ModelArk API :
+#- initailziation :  Refer to class ArkLLM(LLM)
+#    model name to be appended with "openai/<endpoint name>" and custom_llm_provider="openai"
+#- chat completion function also need to have full model name "openai/<endpoint name>"
+
+
 import os
 import json
 import logging
