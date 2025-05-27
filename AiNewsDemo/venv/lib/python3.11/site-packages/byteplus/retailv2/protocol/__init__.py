@@ -1,0 +1,19 @@
+from .byteplus_retailv2_pb2 import (
+    User,
+    WriteUsersRequest,
+    UserError,
+    WriteUsersResponse,
+    Product,
+    WriteProductsRequest,
+    ProductError,
+    WriteProductsResponse,
+    UserEvent,
+    WriteUserEventsRequest,
+    UserEventError,
+    WriteUserEventsResponse,
+    PredictRequest,
+    PredictResult,
+    PredictResponse,
+    AckServerImpressionsRequest,
+    AckServerImpressionsResponse
+)
